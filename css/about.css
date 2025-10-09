@@ -1,0 +1,23 @@
+/* About-sida specifik CSS */
+@import url('styles.css');
+
+/* Specifika stilar för om-sidan */
+/* .page-section {
+  animation: fadeIn 0.5s ease-in;
+}
+ */
+/*den kod är kommenterad ut för att undvika konflikt med project.css*/
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tech-list li {
+  transition: background 0.2s;
+  padding: 0.3rem;
+  border-radius: 4px;
+}
+
+.tech-list li:hover {
+  background: var(--input-bg);
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Om mig — Min Hobby</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">Min Hobby</h1>
+      <nav aria-label="Huvudnavigation">
+        <!--hamburger-knappen -->
+        <button id="nav-toggle-2" aria-expanded="false" aria-controls="main-nav-2" class="hamburger-btn">
+          <svg class="icon icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="sr-only">Meny</span>
+        </button>
+        
+        <ul id="main-nav-2" class="nav-list">
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="about.html" aria-current="page">Om mig</a></li>
+          <li><a href="projects/project1.html">Projekt</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+  <section class="page-section">
+    <h2 class="page-title">Om mig</h2>
+    <p>
+      Hej! Jag heter Moody och jag studerar till mjukvaruutvecklare med fokus på mobilitettjänster.
+      Den här webbplatsen skapade jag som en del av ett hobbyprojekt för att öva på HTML, CSS och JavaScript.
+      Här delar jag med mig av mina projekt, bilder och små interaktiva demoexempel.
+    </p>
+  </section>
+
+  <section class="page-section">
+    <h3>Tekniker jag använder på den hemsidan</h3>
+    <ul class="tech-list">
+      <li><strong>HTML5:</strong> Semantisk struktur och tillgänglighet</li>
+      <li><strong>CSS3:</strong> Flexbox, Grid, variabler och responsiv design</li>
+      <li><strong>JavaScript (ES6):</strong> DOM-manipulation, moduler och events</li>
+      <li><strong>LocalStorage:</strong> För att spara Todo-listan lokalt</li>
+    </ul>
+  </section>
+
+  <section class="page-section">
+    <h3>Vad jag vill lära mig framöver</h3>
+    <p>
+      Jag vill fördjupa mig mer i JavaScript-ramverk som <strong>React</strong> och <strong>Vue</strong>, samt
+      lära mig grunderna i backend med <strong>Node.js</strong> och <strong>API-hantering</strong>.
+      Mitt mål är att kunna bygga fullständiga webbappar med både frontend och backend.
+    </p>
+  </section>
+</main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 Min Hobby</p>
+      <nav class="footer-nav" aria-label="Sidfotsnavigation">
+        <a href="about.html">Om mig</a>
+        <a href="index.html">Hem</a>
+        <a href="projects/project1.html">Projekt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>

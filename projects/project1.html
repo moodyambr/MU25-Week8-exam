@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projekt — Min Hobby</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">Min Hobby</h1>
+      <nav aria-label="Huvudnavigation">
+        <!--  hamburger-knappen -->
+        <button id="nav-toggle-3" aria-expanded="false" aria-controls="main-nav-3" class="hamburger-btn">
+          <svg class="icon icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="sr-only">Meny</span>
+        </button>
+        
+        <ul id="main-nav-3" class="nav-list">
+          <li><a href="../index.html">Hem</a></li>
+          <li><a href="../about.html">Om mig</a></li>
+          <li><a href="project1.html" aria-current="page">Projekt</a></li>
+          <li><a href="../index.html#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-section">
+      <h2 class="page-title">Mitt projekt</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque ab, quae nam minima reiciendis excepturi veniam quos sed animi, saepe praesentium dignissimos! Distinctio nostrum tenetur ipsum, quae voluptate culpa perspiciatis.
+      </p>
+    </section>
+
+    <!-- Country search section -->
+    <section class="page-section">
+      <h3>🌍 Sök land</h3>
+      <p>Välj ett land för att visa information om huvudstad, invånare, bästa städer och karta:</p>
+
+      <label for="countrySelect">Välj ett land:</label>
+      <select id="countrySelect">
+        <option value="">-- Välj land --</option>
+        <option value="Grekland">Grekland</option>
+        <option value="Spanien">Spanien</option>
+        <option value="Turkiet">Turkiet</option>
+      </select>
+
+      <button id="searchBtn">Visa information</button>
+
+      <h4>Resultat</h4>
+      <div id="result"></div>
+    </section>
+
+    <section class="page-section">
+      <h3>🌍 Sök land</h3>
+      <details>
+        <summary>Hur fungerar sök land funktionen?</summary>
+        <p>
+          Funktionen använder en <code>countries</code>-array med objekt för varje land.
+          När användaren väljer ett land och klickar på "Visa information"-knappen,
+          hämtas motsvarande data och visas i resultatområdet.
+        </p>
+      </details>
+      <details>
+        <summary>Vilka interaktiva funktioner finns?</summary>
+        <p>
+          Användaren kan välja mellan tre länder i en dropdown-meny.
+          Vid klick på knappen visas information om huvudstad, invånare, bästa städer och en karta.
+          Om inget land är valt visas ett felmeddelande.
+        </p>
+      </details>
+      <details>
+        <summary>Vad lärde jag mig mest av?</summary>
+        <p>
+          Jag lärde mig mycket om DOM-manipulation, eventhantering och localStorage.er.
+        </p>
+      </details>
+      
+    </section>
+
+    <section class="page-section">
+      <h3>🖼️Galleri</h3>
+      <details>
+        <summary>Hur fungerar galleriet?</summary>
+        <p>
+          Galleriet visar bilder i ett rutnät med möjlighet att "gilla" varje bild och öppna dem i fullskärm.
+          Like-räknaren sparas i <code>localStorage</code> och like-knappen blir
+        </p>
+      </details>
+      <details>
+        <summary>Vilka tekniker användes?</summary>
+        <p>
+          Jag använde HTML5 för semantisk struktur, CSS Grid och Flexbox för layout,
+          samt JavaScript (ES6) för DOM-manipulation och event handling.
+        </p>
+      </details>
+      <details>
+        <summary>Hur implementerades like-funktionen?</summary>
+        <p>
+          Like-systemet använder localStorage för att spara både antal likes och vilka bilder som gillats.
+          CSS-animationer skapar en smooth bounce-effekt när man klickar, och hjärtat ändras från tomt (♡) 
+          till fyllt (♥) med röd färg. Formatering av stora tal (1K, 1M) förhindrar att UI:et bryts.
+        </p>
+      </details>
+    </section>
+
+    <section class="page-section">
+      <h3>📋Todo-listan</h3>
+      <details>
+        <summary>Hur fungerar todo-listan?</summary>
+        <p>
+          Todo-listan låter användaren lägga till, markera som klar och ta bort uppgifter.
+          Uppgifterna sparas i <code>localStorage</code> så att de finns kvar vid omladdning av sidan.
+        </p>
+      </details>
+      <details>
+        <summary>Vad lärde jag mig mest av?</summary>
+        <p>
+          Jag lärde mig mycket om DOM-manipulation, eventhantering och localStorage.
+        </p>
+      </details>
+      <details>
+        <summary>Vad skulle jag göra annorlunda nästa gång?</summary>
+        <p>
+          Nästa gång skulle jag planera kodstrukturen bättre från början och använda mer modulär uppbyggnad.
+          Jag skulle också lägga mer tid på att skriva kommentarer i koden för bättre dokumentation.
+          Fler tester av funktionaliteten hade också varit bra.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 Min Hobby</p>
+      <nav class="footer-nav" aria-label="Sidfotsnavigation">
+        <a href="../projects/project1.html">Project1</a>
+        <a href="../index.html">Hem</a>
+        <a href="../about.html">Om mig</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" type="module"></script>
+</body>
+</html>

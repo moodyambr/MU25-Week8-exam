@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Min Hobby — Hem</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="logo">Min Hobby</h1>
+      <nav aria-label="Huvudnavigation">
+        <!-- Hamburger menu button med SVG ikoner -->
+        <button id="nav-toggle" aria-expanded="false" aria-controls="main-nav" class="hamburger-btn">
+          <svg class="icon icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <svg class="icon icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="sr-only">Meny</span>
+        </button>
+        
+        <ul id="main-nav" class="nav-list">
+          <li><a href="index.html" aria-current="page">Hem</a></li>
+          <li><a href="about.html">Om mig</a></li>
+          <li><a href="projects/project1.html">Projekt</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="images/pexels-alef-morais-336305364-30684729.jpg" alt="En person som fotograferarvid havet">
+          <figcaption>Foto av Alef Morais</figcaption>
+        </div>
+        <div class="hero-text">
+          <h2>Välkommen till min hobby-sida</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia delectus cupiditate, sapiente porro amet nisi totam fugiat architecto numquam natus! Officia nihil dicta tenetur aperiam iure eveniet necessitatibus ipsum illo..</p>
+          <div class="hero-buttons">
+            <a href="https://www.youtube.com" class="cta-button" target="_blank">Följa mig på YouTube</a>
+            <a href="https://www.instagram.com" class="cta-button" target="_blank">Följ mig på Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <article>
+        <h3>Interaktivt galleri</h3>
+        <p>Ett enkelt bildspel med en interaktiv bildgalleri.</p>
+      </article>
+      <article>
+        <h3>Todo-demo</h3>
+        <p>En todo-lista med interaktivitet.</p>
+      </article>
+    </section>
+
+    <section class="gallery container" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Galleri</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item" data-id="0">
+          <img src="images/pexels-alef-morais-336305364-30684729.jpg" alt="En person som fotograferar vid havet">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">Visa</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="1">
+          <img src="images/pexels-aleksey-kuprikov-1883853-3493777.jpg" alt="En bild på en bro i bergen">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">Visa</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="2">
+          <img src="images/pexels-chris-janda-12879-62600.jpg" alt="En bid av höga berg vid gryningen">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">Visa</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="3">
+          <img src="images/pexels-aleksey-kuprikov-1883853-3493777.jpg" alt="En bid av en bro som spänner över djup dal">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">Visa</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="4">
+          <img src="images/pexels-frankdhill-1599899.jpg" alt="En bild av ett fönster med">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">Visa</button>
+          </figcaption>
+        </figure>
+        <figure class="gallery-item" data-id="5">
+          <img src="images/pexels-tomas-anunziata-129267-3876394.jpg" alt="En bild av en person som står på en klippa och blickar ut över havet">
+          <figcaption>
+            <button class="like-btn" aria-pressed="false">♡ 0</button>
+            <button class="view-btn">Visa</button>
+          </figcaption>
+        </figure>
+      </div>
+
+      <dialog id="lightbox" class="lightbox hidden">
+        <div class="lightbox-content">
+          <img id="lightbox-img" src="" alt="">
+          <div class="lightbox-controls">
+            <button id="prev">◀</button>
+            <button id="close-lightbox">×</button>
+            <button id="next">▶</button>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+    <section class="todo container" aria-labelledby="todo-heading">
+      <h2 id="todo-heading">Todo</h2>
+      <form id="todo-form">
+        <input id="todo-input" type="text" placeholder="Lägg till uppgift" aria-label="Ny uppgift">
+        <button class="btn" type="submit">Lägg till</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Kontakt</h2>
+      <form id="contact-form">
+        <label>
+          Namn
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          E-post
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Meddelande
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn" type="submit">Skicka</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© 2025 Min Hobby</p>
+      <nav class="footer-nav" aria-label="Sidfotsnavigation">
+        <a href="index.html">Hem</a>
+        <a href="about.html">Om mig</a>
+        <a href="projects/project1.html">Projekt</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>
