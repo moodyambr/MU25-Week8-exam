@@ -112,7 +112,7 @@ Min-Hobby-Webbplats/
 ### Snabbstart
 1. **Klona projektet från github**
    bash
-   git clone [repository-url]
+   git clone [https://github.com/moodyambr/MU25-Week8-exam.git]
    cd Min-Hobby-Webbplats
   
 
