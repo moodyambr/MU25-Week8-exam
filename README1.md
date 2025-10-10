@@ -35,6 +35,7 @@ Detta projekt är en fullständig responsiv webbplats som visar avancerade webbu
 - **Arrow functions** och destructuring
 - **Async/await** för framtida API-integrationer
 - **LocalStorage** för datalagring
+- **Destructuring** Uppdateras på rad för objekt och array-hantering(rad 191-217)
 
 ## Interaktiva funktioner
 

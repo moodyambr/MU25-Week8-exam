@@ -101,7 +101,7 @@ nav {
 }
 
 /* ================================
-   Buttons (gemensam styling)
+   Buttons 
 =================================== */
 .btn,
 .like-btn,
@@ -128,7 +128,7 @@ input {
   box-shadow: var(--shadow);
 }
 
-/* Button specifika stilar */
+/* Remove default button styles */
 .btn,
 .like-btn,
 .view-btn,
@@ -193,7 +193,7 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(43, 122, 120, 0.1);
 }
 
-/* Button specifika anpassningar */
+/* Button specific styles */
 .like-btn {
   font-size: 1.2rem;
   padding: 0.5rem;
@@ -704,7 +704,7 @@ body.menu-open {
   }
 }
 
-/* Stora skärmar (1200px+) */
+/* Styles for larger screens */
 @media (min-width: 1200px) {
   .gallery-grid {
     gap: 2rem;
@@ -752,7 +752,7 @@ body.menu-open {
   }
 }
 
-/* Surfplatta (769px - 1199px) */
+/* Styles for medium screens (769px - 1199px) */
 @media (max-width: 1199px) and (min-width: 769px) {
   .hero {
     padding: 2.5rem 1rem;
@@ -780,7 +780,7 @@ body.menu-open {
   }
 }
 
-/* Surfplatta och mobil */
+/* Styles for mobile screens */
 @media (max-width: 900px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -792,7 +792,7 @@ body.menu-open {
   }
 }
 
-/* Tablet och mobil navigation */
+ 
 @media (max-width: 768px) {
   .hamburger-btn {
     display: block;
@@ -854,7 +854,7 @@ body.menu-open {
     z-index: -1;
   }
   
-  /* Hero responsiv - tablet */
+  /* Hero responsive - tablet */
   .hero {
     padding: 2rem 1rem;
   }
@@ -1166,7 +1166,7 @@ body.menu-open {
   }
 }
 
-/* Extra små mobiler (480px och mindre) */
+
 @media (max-width: 480px) {
   .nav-list {
     width: 90vw;
@@ -1178,7 +1178,7 @@ body.menu-open {
     height: 20px;
   }
   
-  /* Hero responsiv - extra små mobiler */
+  /* Hero responsiv */
   .hero {
     padding: 1rem 0.5rem;
   }
@@ -1272,7 +1272,7 @@ body.menu-open {
   }
 }
 
-/* Extra extra små mobiler (360px och mindre) */
+
 @media (max-width: 360px) {
   .hero {
     padding: 0.8rem 0.3rem;

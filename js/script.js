@@ -1,8 +1,8 @@
-// script.js (huvudmodul för alla sidor)
+// Help functions for selecting elements
 const $ = selector => document.querySelector(selector);
 const $$ = selector => Array.from(document.querySelectorAll(selector));
 
-// Lägg till CSS för röd like-knapp dynamiskt
+// Styling for like-knappen
 const style = document.createElement('style');
 style.textContent = `
   .like-btn.liked {
@@ -29,7 +29,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ================================
-// Navigationsmeny för alla sidor (uppdaterad)
+// Navigation toggles
 // ================================
 const navToggles = $$('[id^="nav-toggle"]');
 navToggles.forEach(btn => {
@@ -72,7 +72,7 @@ navToggles.forEach(btn => {
 });
 
 // ================================
-// Gallerifunktioner - UPPDATERAD
+// Gallery functionality
 // ================================
 const galleryItems = $$('.gallery-item');
 const lightbox = $('#lightbox');
@@ -82,11 +82,11 @@ const nextBtn = $('#next');
 const prevBtn = $('#prev');
 let currentIndex = 0;
 
-// Like-räknare och gillad status (sparas i localStorage)
+// Like and view counts lagrade i localStorage
 const likes = JSON.parse(localStorage.getItem('likes')) || {};
 const likedImages = JSON.parse(localStorage.getItem('likedImages')) || {};
 
-// Kombinera formatLikes + tooltip för bästa lösning:
+// Formating of like counts
 function formatLikes(count) {
   if (count >= 1000000) {
     return (count / 1000000).toFixed(1).replace('.0', '') + 'M';
@@ -96,27 +96,27 @@ function formatLikes(count) {
   return count.toString();
 }
 
-// Event listeners för like och view knappar
+// Event listeners for like and view knappar
 galleryItems.forEach((item, idx) => {
   const likeBtn = item.querySelector('.like-btn');
   const viewBtn = item.querySelector('.view-btn');
 
-  // Sätt initial like-räknare
+  // Initilaizing like and view counts
   if (!likes[idx]) likes[idx] = 0;
   likeBtn.textContent = `♡ ${likes[idx]}`;
   
-  // Kontrollera om bilden redan är gillad
+  // controling exact like count in tooltip and data attribute
   if (likedImages[idx]) {
     likeBtn.classList.add('liked');
     likeBtn.textContent = `♥ ${likes[idx]}`; // Fyllt hjärta
   }
 
-  // Like-funktionalitet med bounce effect
+  // Like-function with animation
   likeBtn?.addEventListener('click', () => {
     // Lägg till bounce effect
     likeBtn.classList.add('bounce');
     
-    // Ta bort bounce-klassen efter animationen är klar
+  
     setTimeout(() => {
       likeBtn.classList.remove('bounce');
     }, 600);
@@ -127,11 +127,11 @@ galleryItems.forEach((item, idx) => {
     likeBtn.textContent = `♥ ${formatLikes(likes[idx])}`;
     likeBtn.setAttribute('data-exact', `${likes[idx].toLocaleString()}`);
     likeBtn.setAttribute('title', `${likes[idx].toLocaleString()} gillningar`);
-    likeBtn.classList.add('liked'); // Lägg till röd klass
+    likeBtn.classList.add('liked');
     likeBtn.setAttribute('aria-pressed', 'true');
     
     localStorage.setItem('likes', JSON.stringify(likes));
-    localStorage.setItem('likedImages', JSON.stringify(likedImages)); // Spara gillad status
+    localStorage.setItem('likedImages', JSON.stringify(likedImages)); 
   });
     
   viewBtn?.addEventListener('click', () => openLightbox(idx));
@@ -186,21 +186,21 @@ let todos = JSON.parse(localStorage.getItem('todos') || '[]');
 
 const renderTodos = () => {
   if (!todoList) return;
-  
+  //cleaning the list before re-rendering
   todoList.innerHTML = '';
-  todos.forEach((t, i) => {
+  todos.forEach(({ text, done }, i) => {
     const li = document.createElement('li');
     
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.checked = t.done;
+    checkbox.checked = done;
     checkbox.addEventListener('change', () => {
       todos[i].done = checkbox.checked;
       saveAndRender();
     });
 
     const textSpan = document.createElement('span');
-    textSpan.textContent = t.text;
+    textSpan.textContent = text;
 
     const removeBtn = document.createElement('button');
     removeBtn.textContent = 'Ta bort';
@@ -214,7 +214,7 @@ const renderTodos = () => {
     li.appendChild(textSpan);
     li.appendChild(removeBtn);
 
-    if (t.done) {
+    if (done) {
       li.classList.add('completed');
       textSpan.classList.add('done');
     }
@@ -245,7 +245,7 @@ if (todoForm) {
 }
 
 // ================================
-// Kontaktformulär
+// Contact formular
 // ================================
 const contactForm = $('#contact-form');
 contactForm?.addEventListener('submit', e => {
@@ -264,7 +264,7 @@ contactForm?.addEventListener('submit', e => {
 });
 
 // ================================
-// Page animations (för project-sidor)
+// Page animations
 // ================================
 const pageSections = $$('.page-section');
 pageSections.forEach((section, index) => {

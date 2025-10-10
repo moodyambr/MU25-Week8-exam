@@ -1,12 +1,8 @@
-/* About-sida specifik CSS */
+/* About-sida specific CSS */
 @import url('styles.css');
 
-/* Specifika stilar för om-sidan */
-/* .page-section {
-  animation: fadeIn 0.5s ease-in;
-}
- */
-/*den kod är kommenterad ut för att undvika konflikt med project.css*/
+
+/*This code is for the fade-in animation*/
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
