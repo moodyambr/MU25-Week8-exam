@@ -78,7 +78,7 @@ nav {
   position: absolute;
   height: 50%;
   width: 0;
-  /* background-color: var(--btn-bg); */ /* tillhör hamburgere meny :hovar*/
+  background-color: var(--btn-bg); 
   transition: all 0.5s;
   z-index: -1;
 }
@@ -818,7 +818,10 @@ body.menu-open {
     z-index: 1000;
     border-left: 3px solid var(--primary-color);
   }
-  
+  .nav-list a::before,
+  .nav-list a::after {
+    display: none;
+  }
   .nav-list.show {
     right: 0;
   }
@@ -850,7 +853,7 @@ body.menu-open {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     z-index: -1;
   }
   
