@@ -78,7 +78,7 @@ nav {
   position: absolute;
   height: 50%;
   width: 0;
-  background-color: var(--btn-bg);
+  /* background-color: var(--btn-bg); */ /* tillhör hamburgere meny :hovar*/
   transition: all 0.5s;
   z-index: -1;
 }
